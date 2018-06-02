@@ -9,12 +9,11 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    // MARK: - Temporary Properties
-    var heroes_tmp = [("SpiderMan", "Spiderman"),
-                      ("Iron man", "Iron man")]
-
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
+
+    // MARK: - View model object
+    var viewModel: SearchViewModel? = SearchViewModel()
 
     // MARK: - View life cicle
     override func viewDidLoad() {
@@ -29,18 +28,20 @@ class SearchViewController: UIViewController {
 // MARK: - Table view protocols
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.sections
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return heroes_tmp.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.rows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SuperHeroTableViewCell.cellReuseIdentifier, for: indexPath) as? SuperHeroTableViewCell else { fatalError("Unexpected Table View Cell") }
-
-        cell.configure(name: heroes_tmp[indexPath.row].0,
-                       description: heroes_tmp[indexPath.row].1)
+        if let viewModel = viewModel?.viewModel(for: indexPath.row) {
+            cell.configure(viewModel: viewModel)
+        }
 
         return cell
     }

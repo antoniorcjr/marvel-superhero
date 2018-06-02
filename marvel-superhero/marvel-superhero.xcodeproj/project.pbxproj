@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703C020C2C0B3005B350A /* SearchViewController.swift */; };
 		A91703C420C33E1A005B350A /* SuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703C320C33E1A005B350A /* SuperHeroTableViewCell.swift */; };
+		A91703C720C347BB005B350A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703C620C347BB005B350A /* SearchViewModel.swift */; };
+		A91703C920C34DE0005B350A /* SuperHeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703C820C34DE0005B350A /* SuperHeroViewModel.swift */; };
 		A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DC30820C225FA00EB2842 /* AppDelegate.swift */; };
 		A93DC31020C225FA00EB2842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC30E20C225FA00EB2842 /* Main.storyboard */; };
 		A93DC31220C225FA00EB2842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31120C225FA00EB2842 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		A91703C020C2C0B3005B350A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A91703C320C33E1A005B350A /* SuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroTableViewCell.swift; sourceTree = "<group>"; };
+		A91703C620C347BB005B350A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A91703C820C34DE0005B350A /* SuperHeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroViewModel.swift; sourceTree = "<group>"; };
 		A93DC30520C225FA00EB2842 /* marvel-superhero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-superhero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DC30820C225FA00EB2842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93DC30F20C225FA00EB2842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			children = (
 				A91703C020C2C0B3005B350A /* SearchViewController.swift */,
 				A91703C220C33DEF005B350A /* Table View Cells */,
+				A91703C520C3479A005B350A /* View Models */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -87,6 +92,15 @@
 				A91703C320C33E1A005B350A /* SuperHeroTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		A91703C520C3479A005B350A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A91703C620C347BB005B350A /* SearchViewModel.swift */,
+				A91703C820C34DE0005B350A /* SuperHeroViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		A93DC2FC20C225FA00EB2842 = {
@@ -322,6 +336,8 @@
 			files = (
 				A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */,
 				A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */,
+				A91703C920C34DE0005B350A /* SuperHeroViewModel.swift in Sources */,
+				A91703C720C347BB005B350A /* SearchViewModel.swift in Sources */,
 				A91703C420C33E1A005B350A /* SuperHeroTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

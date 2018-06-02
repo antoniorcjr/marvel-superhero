@@ -24,8 +24,8 @@ class SuperHeroTableViewCell: UITableViewCell {
     }
 
     // MARK: - Cell configuration
-    func configure(name: String, description: String) {
-        superheroName.text = name
-        superheroDescription.text = description
+    func configure(viewModel: SuperHeroViewModel) {
+        superheroName.text = viewModel.name
+        superheroDescription.text = viewModel.description
     }
 }
