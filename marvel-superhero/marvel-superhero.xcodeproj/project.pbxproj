@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703C020C2C0B3005B350A /* SearchViewController.swift */; };
+		A91703C420C33E1A005B350A /* SuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703C320C33E1A005B350A /* SuperHeroTableViewCell.swift */; };
 		A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DC30820C225FA00EB2842 /* AppDelegate.swift */; };
 		A93DC31020C225FA00EB2842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC30E20C225FA00EB2842 /* Main.storyboard */; };
 		A93DC31220C225FA00EB2842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31120C225FA00EB2842 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		A91703C020C2C0B3005B350A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A91703C320C33E1A005B350A /* SuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroTableViewCell.swift; sourceTree = "<group>"; };
 		A93DC30520C225FA00EB2842 /* marvel-superhero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-superhero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DC30820C225FA00EB2842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93DC30F20C225FA00EB2842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,8 +76,17 @@
 			isa = PBXGroup;
 			children = (
 				A91703C020C2C0B3005B350A /* SearchViewController.swift */,
+				A91703C220C33DEF005B350A /* Table View Cells */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A91703C220C33DEF005B350A /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A91703C320C33E1A005B350A /* SuperHeroTableViewCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		A93DC2FC20C225FA00EB2842 = {
@@ -311,6 +322,7 @@
 			files = (
 				A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */,
 				A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */,
+				A91703C420C33E1A005B350A /* SuperHeroTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZ8EMUKFBD;
-				INFOPLIST_FILE = "marvel-superhero/Info.plist";
+				INFOPLIST_FILE = "marvel-superhero/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.antoniorcjr.marvel-superhero";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,7 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZ8EMUKFBD;
-				INFOPLIST_FILE = "marvel-superhero/Info.plist";
+				INFOPLIST_FILE = "marvel-superhero/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.antoniorcjr.marvel-superhero";
 				PRODUCT_NAME = "$(TARGET_NAME)";
