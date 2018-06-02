@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703C020C2C0B3005B350A /* SearchViewController.swift */; };
 		A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DC30820C225FA00EB2842 /* AppDelegate.swift */; };
 		A93DC31020C225FA00EB2842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC30E20C225FA00EB2842 /* Main.storyboard */; };
 		A93DC31220C225FA00EB2842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31120C225FA00EB2842 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A91703C020C2C0B3005B350A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A93DC30520C225FA00EB2842 /* marvel-superhero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-superhero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DC30820C225FA00EB2842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93DC30F20C225FA00EB2842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A91703BF20C2C09C005B350A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A91703C020C2C0B3005B350A /* SearchViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		A93DC2FC20C225FA00EB2842 = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A93DC33820C2271300EB2842 /* Application Delegate */,
-				A93DC33920C2273600EB2842 /* ViewControllers */,
+				A91703BF20C2C09C005B350A /* View Controllers */,
 				A93DC33A20C227F400EB2842 /* Storyboards */,
 				A93DC33B20C2280C00EB2842 /* Resources */,
 				A93DC33C20C2281B00EB2842 /* Supporting Files */,
@@ -122,13 +132,6 @@
 				A93DC30820C225FA00EB2842 /* AppDelegate.swift */,
 			);
 			path = "Application Delegate";
-			sourceTree = "<group>";
-		};
-		A93DC33920C2273600EB2842 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A93DC33A20C227F400EB2842 /* Storyboards */ = {
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */,
 				A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
