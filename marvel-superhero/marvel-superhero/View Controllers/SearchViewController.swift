@@ -11,6 +11,10 @@ import UIKit
 class SearchViewController: UIViewController {
     // MARK: - Properties
     var loading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    var footerLoading: UIActivityIndicatorView?
+    var isFooterLoadingActive: Bool = false
+    var offset: Int = 0
+    var limit: Int = 20
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -40,6 +44,10 @@ class SearchViewController: UIViewController {
     private func updateView() {
         DispatchQueue.main.async {
             if let _ = self.tableView {
+                if self.isFooterLoadingActive {
+                    self.footerLoading?.stopAnimating()
+                    self.isFooterLoadingActive = false
+                }
                 self.tableView.reloadData()
                 self.loading.stopAnimating()
             }
@@ -52,8 +60,15 @@ class SearchViewController: UIViewController {
 
     func fetchSuperHeroesData() {
         let dataManager = DataManager()
-        dataManager.superHeroData(limit: 20, offset: 0, query: "") { (superHero) in
-            self.viewModel = SearchViewModel(superHeroes: superHero)
+        dataManager.superHeroData(limit: limit, offset: offset, query: "") { (superHero) in
+            if superHero.count != 0 {
+                if let _ = self.viewModel {
+                    self.viewModel?.superHeroes += superHero
+                } else {
+                    self.viewModel = SearchViewModel(superHeroes: superHero)
+                }
+                self.offset += self.limit
+            }
         }
     }
 }
@@ -77,5 +92,19 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         }
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == viewModel?.rows {
+            fetchSuperHeroesData()
+
+            footerLoading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            footerLoading?.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+
+            self.tableView.tableFooterView = footerLoading
+            self.tableView.tableFooterView?.isHidden = false
+            footerLoading?.startAnimating()
+            isFooterLoadingActive = true
+        }
     }
 }
