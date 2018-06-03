@@ -10,14 +10,14 @@ import Foundation
 
 struct SuperHeroViewModel {
     // MARK: - Properties
-    let superHeroData: (String, String)
+    let superHeroData: SuperHeroData
 
     // MARK: - Computed properties
     var name: String {
-        return superHeroData.0
+        return superHeroData.name
     }
 
     var description: String {
-        return superHeroData.1
+        return superHeroData.descriptionText
     }
 }

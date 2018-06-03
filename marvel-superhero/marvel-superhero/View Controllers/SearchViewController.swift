@@ -13,15 +13,35 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - View model object
-    var viewModel: SearchViewModel? = SearchViewModel()
+    var viewModel: SearchViewModel? {
+        didSet {
+            updateView()
+        }
+    }
 
     // MARK: - View life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchSuperHeroesData()
+    }
+
+    private func updateView() {
+        DispatchQueue.main.async {
+            if let _ = self.tableView {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    func fetchSuperHeroesData() {
+        let dataManager = DataManager()
+        dataManager.superHeroData(limit: 20, offset: 0, query: "") { (superHero) in
+            self.viewModel = SearchViewModel(superHeroes: superHero)
+        }
     }
 }
 

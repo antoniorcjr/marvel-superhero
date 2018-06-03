@@ -10,8 +10,7 @@ import Foundation
 
 struct SearchViewModel {
     // Mark: - Temporary data
-    var heroes_tmp = [("SpiderMan", "Spiderman"),
-                      ("Iron man", "Iron man")]
+    var superHeroes: [SuperHeroData]
 
     // Mark: - Computed properties
     var sections: Int {
@@ -19,11 +18,11 @@ struct SearchViewModel {
     }
 
     var rows: Int {
-        return heroes_tmp.count
+        return superHeroes.count
     }
 
     // Mark: - Functions
     func viewModel(for index: Int) -> SuperHeroViewModel {
-        return SuperHeroViewModel(superHeroData: heroes_tmp[index])
+        return SuperHeroViewModel(superHeroData: superHeroes[index])
     }
 }
