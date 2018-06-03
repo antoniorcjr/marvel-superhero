@@ -10,6 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     // MARK: - Properties
+    var loading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - View model object
@@ -22,13 +24,24 @@ class SearchViewController: UIViewController {
     // MARK: - View life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+
         fetchSuperHeroesData()
+    }
+
+    private func setupView() {
+        loading.hidesWhenStopped = true
+        loading.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        loading.startAnimating()
+
+        tableView.backgroundView = loading
     }
 
     private func updateView() {
         DispatchQueue.main.async {
             if let _ = self.tableView {
                 self.tableView.reloadData()
+                self.loading.stopAnimating()
             }
         }
     }
