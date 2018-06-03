@@ -28,14 +28,6 @@ struct SuperHeroData {
     let name: String
     let descriptionText: String
     let imagePath: String
-
-    // MARK: -
-    var asDictionary: [String: Any] {
-        return [ Keys.id: id,
-                 Keys.name : name,
-                 Keys.description: descriptionText,
-                 Keys.path: imagePath ]
-    }
 }
 
 extension SuperHeroData {
@@ -44,6 +36,9 @@ extension SuperHeroData {
         id = (dictionary[Keys.id] as? Int) ?? 0
         name = (dictionary[Keys.name] as? String) ?? ""
         descriptionText = (dictionary[Keys.description] as? String) ?? ""
-        imagePath = (dictionary[Keys.path] as? String) ?? ""
-    }
+
+        let thumbnailData = (dictionary[Keys.thumbnail] as? [String: Any]) ?? [:]
+        let path = (thumbnailData[Keys.path] as? String) ?? ""
+        let extensionPath = (thumbnailData[Keys.extensionPath] as? String) ?? ""
+        self.imagePath = path + "." + extensionPath    }
 }
