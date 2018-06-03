@@ -9,9 +9,14 @@
 import UIKit
 
 class SuperHeroDetailsViewController: UIViewController {
+    // MARK: - Properties
+    var comicSegue = "ComicSegue"
+
     @IBOutlet weak var superHeroImage: UIImageView!
     @IBOutlet weak var superHeroName: UILabel!
 
+    @IBOutlet weak var comicViewController: UIView!
+    
     var viewModel: SuperHeroViewModel?
 
     override func viewDidLoad() {
