@@ -163,12 +163,12 @@
 		A93DC30720C225FA00EB2842 /* marvel-superhero */ = {
 			isa = PBXGroup;
 			children = (
-				A91703CD20C35151005B350A /* Extensions */,
 				A93DC33820C2271300EB2842 /* Application Delegate */,
 				A91703BF20C2C09C005B350A /* View Controllers */,
 				A93DC33A20C227F400EB2842 /* Storyboards */,
 				A91703CA20C3512F005B350A /* Managers */,
 				A91703D620C3720B005B350A /* Models */,
+				A91703CD20C35151005B350A /* Extensions */,
 				A93DC33B20C2280C00EB2842 /* Resources */,
 				A93DC33C20C2281B00EB2842 /* Supporting Files */,
 			);

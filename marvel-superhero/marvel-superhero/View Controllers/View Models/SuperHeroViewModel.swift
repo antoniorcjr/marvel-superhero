@@ -20,4 +20,8 @@ struct SuperHeroViewModel {
     var description: String {
         return superHeroData.descriptionText
     }
+
+    var image: String {
+        return superHeroData.imagePath
+    }
 }
