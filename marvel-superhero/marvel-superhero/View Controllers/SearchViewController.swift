@@ -71,6 +71,14 @@ class SearchViewController: UIViewController {
             }
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PresentSuperHero" {
+            let vc = segue.destination as? SuperHeroDetailsViewController
+            guard let index = sender as? Int else { return }
+            vc?.viewModel = viewModel?.viewModel(for: index)
+        }
+    }
 }
 
 // MARK: - Table view protocols
@@ -107,5 +115,10 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             footerLoading?.startAnimating()
             isFooterLoadingActive = true
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "PresentSuperHero", sender: indexPath.row)
     }
 }
