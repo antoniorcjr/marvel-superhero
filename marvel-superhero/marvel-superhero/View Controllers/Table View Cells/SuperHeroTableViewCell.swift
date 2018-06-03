@@ -27,13 +27,6 @@ class SuperHeroTableViewCell: UITableViewCell {
     func configure(viewModel: SuperHeroViewModel) {
         superheroName.text = viewModel.name
         superheroDescription.text = viewModel.description
-        if let url = URL(string: viewModel.image),
-            let data = try? Data(contentsOf: url) {
-            if let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.superheroImage.image = image
-                }
-            }
-        }
+        superheroImage.loadImage(fromURL: viewModel.image)
     }
 }

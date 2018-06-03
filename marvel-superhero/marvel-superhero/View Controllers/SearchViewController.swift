@@ -88,6 +88,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SuperHeroTableViewCell.cellReuseIdentifier, for: indexPath) as? SuperHeroTableViewCell else { fatalError("Unexpected Table View Cell") }
         if let viewModel = viewModel?.viewModel(for: indexPath.row) {
+            cell.superheroImage.image = #imageLiteral(resourceName: "marvel_notfound")
             cell.configure(viewModel: viewModel)
         }
 
