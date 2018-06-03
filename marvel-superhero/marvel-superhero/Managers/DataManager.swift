@@ -51,8 +51,7 @@ final class DataManager {
      */
     func superHeroData(limit: Int, offset: Int, query: String, completion: @escaping ([SuperHeroData]) -> Void) {
         guard var stringUrl = API.Routes.caracters.url else { return }
-        stringUrl += "&limit=" + String(limit)
-        stringUrl += "&offset=" + String(offset)
+        stringUrl += "&limit=" + String(limit) + "&offset=" + String(offset)
         
         if query != "" {
             stringUrl += "&nameStartsWith=" + query
@@ -65,12 +64,10 @@ final class DataManager {
                 completion([])
                 return
             }
-            var superHero: [SuperHeroData] = []
-            for heroes in result {
-                if let hero = SuperHeroData(dictionary: heroes) {
-                    superHero.append(hero)
-                }
-            }
+
+            let superHero: [SuperHeroData] =
+                result.map { SuperHeroData(dictionary: $0)! }
+
             completion(superHero)
         }
     }
