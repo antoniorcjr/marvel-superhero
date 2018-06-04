@@ -24,6 +24,8 @@
 		A91703F420C43E01005B350A /* CollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F320C43E01005B350A /* CollectionData.swift */; };
 		A91703F620C441AC005B350A /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F520C441AC005B350A /* CustomCollectionViewCell.swift */; };
 		A91703F920C4B331005B350A /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F820C4B331005B350A /* ComicViewController.swift */; };
+		A91703FB20C4B8C1005B350A /* ParticipationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703FA20C4B8C1005B350A /* ParticipationData.swift */; };
+		A91703FD20C4CE7F005B350A /* ParticipationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703FC20C4CE7F005B350A /* ParticipationDetailsViewController.swift */; };
 		A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DC30820C225FA00EB2842 /* AppDelegate.swift */; };
 		A93DC31020C225FA00EB2842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC30E20C225FA00EB2842 /* Main.storyboard */; };
 		A93DC31220C225FA00EB2842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31120C225FA00EB2842 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		A91703F320C43E01005B350A /* CollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionData.swift; sourceTree = "<group>"; };
 		A91703F520C441AC005B350A /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		A91703F820C4B331005B350A /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
+		A91703FA20C4B8C1005B350A /* ParticipationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationData.swift; sourceTree = "<group>"; };
+		A91703FC20C4CE7F005B350A /* ParticipationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationDetailsViewController.swift; sourceTree = "<group>"; };
 		A93DC30520C225FA00EB2842 /* marvel-superhero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-superhero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DC30820C225FA00EB2842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93DC30F20C225FA00EB2842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				A91703F820C4B331005B350A /* ComicViewController.swift */,
 				A91703C020C2C0B3005B350A /* SearchViewController.swift */,
 				A91703F120C430C6005B350A /* SuperHeroDetailsViewController.swift */,
+				A91703FC20C4CE7F005B350A /* ParticipationDetailsViewController.swift */,
 				A91703C220C33DEF005B350A /* Custom Cells */,
 				A91703C520C3479A005B350A /* View Models */,
 			);
@@ -157,6 +162,7 @@
 				A91703D720C3724A005B350A /* DataWrapper.swift */,
 				A91703D920C37A9F005B350A /* SuperHeroData.swift */,
 				A91703F320C43E01005B350A /* CollectionData.swift */,
+				A91703FA20C4B8C1005B350A /* ParticipationData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,10 +435,12 @@
 				A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */,
 				A91703F620C441AC005B350A /* CustomCollectionViewCell.swift in Sources */,
 				A91703F920C4B331005B350A /* ComicViewController.swift in Sources */,
+				A91703FB20C4B8C1005B350A /* ParticipationData.swift in Sources */,
 				A91703F020C42D0B005B350A /* UIImageView.swift in Sources */,
 				A91703DA20C37A9F005B350A /* SuperHeroData.swift in Sources */,
 				A91703D820C3724A005B350A /* DataWrapper.swift in Sources */,
 				A91703CC20C35140005B350A /* DataManager.swift in Sources */,
+				A91703FD20C4CE7F005B350A /* ParticipationDetailsViewController.swift in Sources */,
 				A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */,
 				A91703D520C3719D005B350A /* RequestManager.swift in Sources */,
 				A91703C920C34DE0005B350A /* SuperHeroViewModel.swift in Sources */,

@@ -28,10 +28,10 @@ struct SuperHeroData {
     let name: String
     let descriptionText: String
     let imagePath: String
-    let comics: Collection?
-    let series: Collection?
-    let stories: Collection?
-    let events: Collection?
+    let comics: CollectionData?
+    let series: CollectionData?
+    let stories: CollectionData?
+    let events: CollectionData?
 }
 
 extension SuperHeroData {
@@ -48,12 +48,12 @@ extension SuperHeroData {
 
         // Creating the Comic, Series, Stories and Events list
         let comicData = (dictionary[Keys.comics] as? [String: Any]) ?? [:]
-        self.comics = Collection(dataDict: comicData, type: .comics)
+        self.comics = CollectionData(dataDict: comicData, type: .comics)
         let seriesData = (dictionary[Keys.series] as? [String: Any]) ?? [:]
-        self.series = Collection(dataDict: seriesData, type: .series)
+        self.series = CollectionData(dataDict: seriesData, type: .series)
         let storiesData = (dictionary[Keys.stories] as? [String: Any]) ?? [:]
-        self.stories = Collection(dataDict: storiesData, type: .stories)
+        self.stories = CollectionData(dataDict: storiesData, type: .stories)
         let eventsData = (dictionary[Keys.events] as? [String: Any]) ?? [:]
-        self.events = Collection(dataDict: eventsData, type: .events)
+        self.events = CollectionData(dataDict: eventsData, type: .events)
     }
 }

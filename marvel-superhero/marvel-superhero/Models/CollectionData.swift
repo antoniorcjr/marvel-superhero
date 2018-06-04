@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Collection {
+public class CollectionData {
     public enum ParticipationType: String {
         case comics = "Comics"
         case series = "Series"

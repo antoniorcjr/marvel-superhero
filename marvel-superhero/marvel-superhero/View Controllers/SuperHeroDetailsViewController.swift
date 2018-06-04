@@ -12,11 +12,11 @@ class SuperHeroDetailsViewController: UIViewController {
     // MARK: - Properties
     var comicSegue = "ComicSegue"
 
+    @IBOutlet private var comicViewController: ComicViewController!
+
     @IBOutlet weak var superHeroImage: UIImageView!
     @IBOutlet weak var superHeroName: UILabel!
 
-    @IBOutlet weak var comicViewController: UIView!
-    
     var viewModel: SuperHeroViewModel?
 
     override func viewDidLoad() {
@@ -30,5 +30,19 @@ class SuperHeroDetailsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+
+        switch identifier {
+        case comicSegue:
+            guard let destination = segue.destination as? ComicViewController else {
+                fatalError("Unexpected Destination View Controller")
+            }
+            self.comicViewController = destination
+            self.comicViewController.datas = viewModel?.superHeroData.comics
+        default: break
+        }
     }
 }

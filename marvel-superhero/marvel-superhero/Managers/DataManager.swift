@@ -17,6 +17,7 @@ public struct API {
     enum Routes: String {
         // MARK: - Routes list
         case caracters = "/v1/public/characters"
+        case none = ""
 
         // MARK: - Computed properties
         var url: String? {
@@ -69,6 +70,22 @@ final class DataManager {
                 result.map { SuperHeroData(dictionary: $0)! }
 
             completion(superHero)
+        }
+    }
+
+    func comicData(limit: Int, collectionUri: String, completion: @escaping ([Participation]) -> Void) {
+        var finalUrl = collectionUri + (API.Routes.none.timestamp ?? "")
+        finalUrl += "&limit=" + String(limit)
+        guard let url = URL(string: finalUrl) else { return }
+
+        requestManager.request(url: url, method: .get) { (data, error) in
+            var comics: [Participation] = []
+            if let result = data["results"] as? [[String: Any]] {
+                for comic in result {
+                    comics.append(Participation(dataDict: comic))
+                }
+            }
+            completion(comics)
         }
     }
 }

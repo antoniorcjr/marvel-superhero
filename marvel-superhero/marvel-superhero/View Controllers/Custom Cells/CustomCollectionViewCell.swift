@@ -9,7 +9,13 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var image: UIView!
+    // MARK: Properties
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var name: UILabel!
 
+    // Cell configuration
+    func configure(data: Participation) {
+        image.loadImage(fromURL: data.imagePath)
+        name.text = data.title
+    }
 }
