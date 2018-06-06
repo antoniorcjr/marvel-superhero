@@ -30,6 +30,7 @@
 		A93DC31020C225FA00EB2842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC30E20C225FA00EB2842 /* Main.storyboard */; };
 		A93DC31220C225FA00EB2842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31120C225FA00EB2842 /* Assets.xcassets */; };
 		A93DC31520C225FA00EB2842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31320C225FA00EB2842 /* LaunchScreen.storyboard */; };
+		A9B5420620C6AE7F0000093F /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = A91703DF20C40318005B350A /* character.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -407,6 +408,7 @@
 				A93DC31520C225FA00EB2842 /* LaunchScreen.storyboard in Resources */,
 				A93DC31220C225FA00EB2842 /* Assets.xcassets in Resources */,
 				A93DC31020C225FA00EB2842 /* Main.storyboard in Resources */,
+				A9B5420620C6AE7F0000093F /* character.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
