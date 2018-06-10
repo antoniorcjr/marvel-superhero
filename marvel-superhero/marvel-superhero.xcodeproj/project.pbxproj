@@ -32,6 +32,7 @@
 		A93DC31520C225FA00EB2842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31320C225FA00EB2842 /* LaunchScreen.storyboard */; };
 		A9B5420620C6AE7F0000093F /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = A91703DF20C40318005B350A /* character.json */; };
 		A9E38C7520CD9CCE00562CE6 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */; };
+		A9E38C7720CDA43600562CE6 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7620CDA43600562CE6 /* StoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A93DC32620C225FA00EB2842 /* marvel-superheroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-superheroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DC32C20C225FA00EB2842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		A9E38C7620CDA43600562CE6 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 			children = (
 				A91703F820C4B331005B350A /* ComicViewController.swift */,
 				A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */,
+				A9E38C7620CDA43600562CE6 /* StoryViewController.swift */,
 			);
 			path = "Super Hero Details";
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E38C7720CDA43600562CE6 /* StoryViewController.swift in Sources */,
 				A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */,
 				A91703F620C441AC005B350A /* CustomCollectionViewCell.swift in Sources */,
 				A91703F920C4B331005B350A /* ComicViewController.swift in Sources */,
