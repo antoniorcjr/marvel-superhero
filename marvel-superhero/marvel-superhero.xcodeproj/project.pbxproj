@@ -33,6 +33,7 @@
 		A9B5420620C6AE7F0000093F /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = A91703DF20C40318005B350A /* character.json */; };
 		A9E38C7520CD9CCE00562CE6 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */; };
 		A9E38C7720CDA43600562CE6 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7620CDA43600562CE6 /* StoryViewController.swift */; };
+		A9E38C7920CDE9CE00562CE6 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7820CDE9CE00562CE6 /* SerieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		A93DC32C20C225FA00EB2842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		A9E38C7620CDA43600562CE6 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		A9E38C7820CDE9CE00562CE6 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 				A91703F820C4B331005B350A /* ComicViewController.swift */,
 				A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */,
 				A9E38C7620CDA43600562CE6 /* StoryViewController.swift */,
+				A9E38C7820CDE9CE00562CE6 /* SerieViewController.swift */,
 			);
 			path = "Super Hero Details";
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				A91703D820C3724A005B350A /* DataWrapper.swift in Sources */,
 				A91703CC20C35140005B350A /* DataManager.swift in Sources */,
 				A91703FD20C4CE7F005B350A /* ParticipationDetailsViewController.swift in Sources */,
+				A9E38C7920CDE9CE00562CE6 /* SerieViewController.swift in Sources */,
 				A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */,
 				A91703D520C3719D005B350A /* RequestManager.swift in Sources */,
 				A91703C920C34DE0005B350A /* SuperHeroViewModel.swift in Sources */,

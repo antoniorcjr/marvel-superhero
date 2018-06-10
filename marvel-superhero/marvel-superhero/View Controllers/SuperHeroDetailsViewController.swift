@@ -13,10 +13,12 @@ class SuperHeroDetailsViewController: UIViewController {
     var comicSegue = "ComicSegue"
     var eventSegue = "EventSegue"
     var storySegue = "StorySegue"
+    var serieSegue = "SerieSegue"
 
     @IBOutlet private var comicViewController: ComicViewController!
     @IBOutlet private var eventViewController: EventViewController!
     @IBOutlet private var storyViewController: StoryViewController!
+    @IBOutlet private var serieViewController: SerieViewController!
 
     @IBOutlet weak var superHeroImage: UIImageView!
     @IBOutlet weak var superHeroName: UILabel!
@@ -58,6 +60,12 @@ class SuperHeroDetailsViewController: UIViewController {
             }
             self.storyViewController = destination
             self.storyViewController.datas = viewModel?.superHeroData.stories
+        case serieSegue:
+            guard let destination = segue.destination as? SerieViewController else {
+                fatalError("Unexpected Destination View Controller")
+            }
+            self.serieViewController = destination
+            self.serieViewController.datas = viewModel?.superHeroData.series
         default: break
         }
     }
