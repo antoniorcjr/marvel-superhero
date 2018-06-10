@@ -103,39 +103,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WQd-6a-4xx">
-                                <rect key="frame" x="16" y="84" width="343" height="204"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD3-Ef-86P">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h49-ak-GcZ">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="488"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WQd-6a-4xx">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="204" id="bQd-1l-vtB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-cI-Rej">
+                                                <rect key="frame" x="0.0" y="204" width="375" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="NJh-95-8xU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" red="0.78481549019999997" green="0.14710986609999999" blue="0.02336045913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CD-d5-dRd">
+                                                <rect key="frame" x="0.0" y="228" width="375" height="260"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="260" id="zvE-oH-ZpU"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="QAt-5f-VaK" kind="embed" identifier="ComicSegue" id="X50-cM-K5w"/>
+                                                </connections>
+                                            </containerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="204" id="a7p-Vf-WTj"/>
+                                    <constraint firstItem="h49-ak-GcZ" firstAttribute="leading" secondItem="aD3-Ef-86P" secondAttribute="leading" id="53B-OW-FE4"/>
+                                    <constraint firstItem="h49-ak-GcZ" firstAttribute="top" secondItem="aD3-Ef-86P" secondAttribute="top" constant="20" id="IPi-wM-l2c"/>
+                                    <constraint firstAttribute="bottom" secondItem="h49-ak-GcZ" secondAttribute="bottom" constant="20" id="LFr-ue-8aZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="h49-ak-GcZ" secondAttribute="trailing" id="MPz-O1-xgs"/>
+                                    <constraint firstItem="h49-ak-GcZ" firstAttribute="width" secondItem="aD3-Ef-86P" secondAttribute="width" id="Mi0-uA-3aU"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-cI-Rej">
-                                <rect key="frame" x="16" y="296" width="343" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <color key="textColor" red="0.78481549019999997" green="0.14710986609999999" blue="0.02336045913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CD-d5-dRd">
-                                <rect key="frame" x="16" y="341" width="343" height="260"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="aAB-z7-KVe"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="QAt-5f-VaK" kind="embed" identifier="ComicSegue" id="X50-cM-K5w"/>
-                                </connections>
-                            </containerView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1CD-d5-dRd" firstAttribute="top" secondItem="bd1-cI-Rej" secondAttribute="bottom" constant="21" id="4Df-o6-pry"/>
-                            <constraint firstItem="bd1-cI-Rej" firstAttribute="leading" secondItem="WQd-6a-4xx" secondAttribute="leading" id="M3Y-pz-XF4"/>
-                            <constraint firstItem="1CD-d5-dRd" firstAttribute="trailing" secondItem="bd1-cI-Rej" secondAttribute="trailing" id="OgP-WS-P8q"/>
-                            <constraint firstItem="1CD-d5-dRd" firstAttribute="leading" secondItem="bd1-cI-Rej" secondAttribute="leading" id="SWZ-UD-Gp7"/>
-                            <constraint firstItem="bd1-cI-Rej" firstAttribute="trailing" secondItem="WQd-6a-4xx" secondAttribute="trailing" id="Vyp-9Z-ssh"/>
-                            <constraint firstItem="WQd-6a-4xx" firstAttribute="top" secondItem="pcx-7E-Jck" secondAttribute="top" constant="20" id="Z7f-5I-GO3"/>
-                            <constraint firstItem="bd1-cI-Rej" firstAttribute="top" secondItem="WQd-6a-4xx" secondAttribute="bottom" constant="8" id="fbW-Bb-du7"/>
-                            <constraint firstItem="pcx-7E-Jck" firstAttribute="trailing" secondItem="WQd-6a-4xx" secondAttribute="trailing" constant="16" id="phZ-ZJ-6x3"/>
-                            <constraint firstItem="WQd-6a-4xx" firstAttribute="leading" secondItem="pcx-7E-Jck" secondAttribute="leading" constant="16" id="uc1-lo-Ozs"/>
+                            <constraint firstItem="aD3-Ef-86P" firstAttribute="top" secondItem="pcx-7E-Jck" secondAttribute="top" id="7QV-bh-2I9"/>
+                            <constraint firstAttribute="trailing" secondItem="aD3-Ef-86P" secondAttribute="trailing" id="LzP-Yw-V6e"/>
+                            <constraint firstItem="pcx-7E-Jck" firstAttribute="bottom" secondItem="aD3-Ef-86P" secondAttribute="bottom" id="hpN-17-cIE"/>
+                            <constraint firstItem="aD3-Ef-86P" firstAttribute="leading" secondItem="dJB-g6-v2Z" secondAttribute="leading" id="lAO-Hh-bNi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pcx-7E-Jck"/>
                     </view>
@@ -190,23 +205,23 @@
             <objects>
                 <viewController id="QAt-5f-VaK" customClass="ComicViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WMu-s6-NAs">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="260"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdo-AA-8j9">
-                                <rect key="frame" x="8" y="8" width="327" height="24"/>
+                                <rect key="frame" x="8" y="8" width="359" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.086274509799999996" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no comics available" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK7-Wq-vtz">
-                                <rect key="frame" x="8" y="117.5" width="327" height="24"/>
+                                <rect key="frame" x="8" y="117.5" width="359" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-dh-g2r">
-                                <rect key="frame" x="8" y="40" width="327" height="210"/>
+                                <rect key="frame" x="8" y="40" width="359" height="210"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="4TC-P3-nXq"/>
