@@ -11,8 +11,10 @@ import UIKit
 class SuperHeroDetailsViewController: UIViewController {
     // MARK: - Properties
     var comicSegue = "ComicSegue"
+    var eventSegue = "EventSegue"
 
     @IBOutlet private var comicViewController: ComicViewController!
+    @IBOutlet private var eventViewController: EventViewController!
 
     @IBOutlet weak var superHeroImage: UIImageView!
     @IBOutlet weak var superHeroName: UILabel!
@@ -42,6 +44,12 @@ class SuperHeroDetailsViewController: UIViewController {
             }
             self.comicViewController = destination
             self.comicViewController.datas = viewModel?.superHeroData.comics
+        case eventSegue:
+            guard let destination = segue.destination as? EventViewController else {
+                fatalError("Unexpected Destination View Controller")
+            }
+            self.eventViewController = destination
+            self.eventViewController.datas = viewModel?.superHeroData.events
         default: break
         }
     }
