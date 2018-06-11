@@ -10,18 +10,27 @@ import UIKit
 
 class ComicViewController: UIViewController {
     // MARK: - Properties
+    var loading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var datas: CollectionData?
-    var comics: [Participation] = []
 
     @IBOutlet weak var collectionView: UICollectionView!
+
+    // MARK: - View model object
+    var viewModel: EventsViewModel? {
+        didSet {
+            updateView()
+        }
+    }
 
     // MARK: - View life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+
         let dataManager = DataManager()
         if let url = datas?.collectionUri {
             dataManager.comicData(limit: 3, collectionUri: url, completion: { (comics) in
-                self.comics = comics
+                self.viewModel = EventsViewModel(events: comics)
                 DispatchQueue.main.async {
                     if comics.count == 0 {
                         self.collectionView.isHidden = true
@@ -31,6 +40,14 @@ class ComicViewController: UIViewController {
                 }
             })
         }
+    }
+
+    private func setupView() {
+        loading.hidesWhenStopped = true
+        loading.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        loading.startAnimating()
+
+        collectionView.backgroundView = loading
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,13 +61,23 @@ class ComicViewController: UIViewController {
             }
         }
     }
+
+    func updateView() {
+        DispatchQueue.main.async {
+            if let _ = self.collectionView {
+                self.collectionView.reloadData()
+                self.loading.stopAnimating()
+            }
+        }
+    }
 }
 
 // MARK: Collection view protocols
 extension ComicViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return comics.count
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.rows
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -59,12 +86,14 @@ extension ComicViewController: UICollectionViewDelegate, UICollectionViewDataSou
             collectionView.dequeueReusableCell(withReuseIdentifier: "comicCell", for: indexPath)
                 as? CustomCollectionViewCell else { return UICollectionViewCell() }
 
-        cell.configure(data: comics[indexPath.row])
+        if let viewModel = viewModel {
+            cell.configure(data: viewModel.event(for: indexPath.row))
+        }
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "PresentParticipationDetails", sender: comics[indexPath.row])
+        performSegue(withIdentifier: "PresentParticipationDetails", sender: viewModel?.event(for: indexPath.row))
     }
 }
