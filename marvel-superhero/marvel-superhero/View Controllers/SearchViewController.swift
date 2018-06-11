@@ -137,16 +137,30 @@ extension SearchViewController: UISearchBarDelegate {
             self.query = query
             fetchSuperHeroesData(withQuery: true)
             searchBar.resignFirstResponder()
-            loading.stopAnimating()
+            DispatchQueue.main.async {
+                self.loading.startAnimating()
+            }
         }
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            clearSearch()
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            clearSearch()
+        }
+    }
+
+    func clearSearch() {
         searchBar.text = ""
         query = ""
         searchBar.resignFirstResponder()
 
-        loading.startAnimating()
+        DispatchQueue.main.async {
+            self.loading.startAnimating()
+        }
         fetchSuperHeroesData(withQuery: true)
     }
 }
