@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="812.79999999999995" y="-0.89955022488755632"/>
         </scene>
-        <!--Comic View Controller-->
+        <!--Events View Controller-->
         <scene sceneID="xOb-xQ-T7T">
             <objects>
-                <viewController id="QAt-5f-VaK" customClass="ComicViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QAt-5f-VaK" customClass="EventsViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WMu-s6-NAs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,10 +424,10 @@
             </objects>
             <point key="canvasLocation" x="4434" y="89"/>
         </scene>
-        <!--Event View Controller-->
+        <!--Events View Controller-->
         <scene sceneID="qIv-Yt-LTE">
             <objects>
-                <viewController id="tkI-Bn-l8r" customClass="EventViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tkI-Bn-l8r" customClass="EventsViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FZS-Vb-gZZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,6 +523,7 @@
                             <constraint firstAttribute="trailing" secondItem="Yph-gG-7xy" secondAttribute="trailing" constant="8" id="lQz-j9-3GA"/>
                             <constraint firstItem="Kq7-1F-WGJ" firstAttribute="leading" secondItem="Yph-gG-7xy" secondAttribute="leading" id="whz-ci-M7u"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="u67-Zx-3ll"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Kq7-1F-WGJ" id="cK6-W0-jrN"/>
@@ -533,10 +534,10 @@
             </objects>
             <point key="canvasLocation" x="3438" y="-132"/>
         </scene>
-        <!--Story View Controller-->
+        <!--Events View Controller-->
         <scene sceneID="Gfm-VF-1wz">
             <objects>
-                <viewController id="U9l-FU-DNe" customClass="StoryViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U9l-FU-DNe" customClass="EventsViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0Y-1p-zG6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,6 +633,7 @@
                             <constraint firstItem="Cur-TB-zuD" firstAttribute="trailing" secondItem="Jlc-yj-hLo" secondAttribute="trailing" id="gkQ-2z-7Fq"/>
                             <constraint firstItem="Jlc-yj-hLo" firstAttribute="top" secondItem="S0Y-1p-zG6" secondAttribute="top" constant="8" id="rGW-Zf-hR5"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="avv-5E-FKz"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Cur-TB-zuD" id="SDb-2q-g0b"/>
@@ -642,10 +644,10 @@
             </objects>
             <point key="canvasLocation" x="3438" y="221"/>
         </scene>
-        <!--Serie View Controller-->
+        <!--Events View Controller-->
         <scene sceneID="ISh-I4-pYq">
             <objects>
-                <viewController id="4hN-aq-5lb" customClass="SerieViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4hN-aq-5lb" customClass="EventsViewController" customModule="marvel_superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKc-gt-fsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -741,10 +743,11 @@
                             <constraint firstItem="Pg4-tf-vSW" firstAttribute="centerY" secondItem="KKc-gt-fsS" secondAttribute="centerY" id="aXI-C4-WnD"/>
                             <constraint firstItem="Pg4-tf-vSW" firstAttribute="trailing" secondItem="zIa-NX-vFg" secondAttribute="trailing" id="wZ8-G5-X5k"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="7hZ-P4-8rg"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="OjN-Lg-xld" id="Ph1-AB-KYI"/>
-                        <segue destination="sHq-Xe-VtB" kind="show" identifier="PresentParticipationDetails" id="61u-QW-8NY"/>
+                        <segue destination="sHq-Xe-VtB" kind="presentation" identifier="PresentParticipationDetails" id="61u-QW-8NY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KsZ-tO-jzi" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComicViewController: UIViewController {
+class EventsViewController: UIViewController {
     // MARK: - Properties
     var loading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     var datas: CollectionData?
@@ -73,7 +73,7 @@ class ComicViewController: UIViewController {
 }
 
 // MARK: Collection view protocols
-extension ComicViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension EventsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }

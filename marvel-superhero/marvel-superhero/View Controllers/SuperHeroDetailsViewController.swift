@@ -15,10 +15,10 @@ class SuperHeroDetailsViewController: UIViewController {
     var storySegue = "StorySegue"
     var serieSegue = "SerieSegue"
 
-    @IBOutlet private var comicViewController: ComicViewController!
-    @IBOutlet private var eventViewController: EventViewController!
-    @IBOutlet private var storyViewController: StoryViewController!
-    @IBOutlet private var serieViewController: SerieViewController!
+    @IBOutlet private var comicViewController: EventsViewController!
+    @IBOutlet private var eventViewController: EventsViewController!
+    @IBOutlet private var storyViewController: EventsViewController!
+    @IBOutlet private var serieViewController: EventsViewController!
 
     @IBOutlet weak var superHeroImage: UIImageView!
     @IBOutlet weak var superHeroName: UILabel!
@@ -43,25 +43,25 @@ class SuperHeroDetailsViewController: UIViewController {
 
         switch identifier {
         case comicSegue:
-            guard let destination = segue.destination as? ComicViewController else {
+            guard let destination = segue.destination as? EventsViewController else {
                 fatalError("Unexpected Destination View Controller")
             }
             self.comicViewController = destination
             self.comicViewController.datas = viewModel?.superHeroData.comics
         case eventSegue:
-            guard let destination = segue.destination as? EventViewController else {
+            guard let destination = segue.destination as? EventsViewController else {
                 fatalError("Unexpected Destination View Controller")
             }
             self.eventViewController = destination
             self.eventViewController.datas = viewModel?.superHeroData.events
         case storySegue:
-            guard let destination = segue.destination as? StoryViewController else {
+            guard let destination = segue.destination as? EventsViewController else {
                 fatalError("Unexpected Destination View Controller")
             }
             self.storyViewController = destination
             self.storyViewController.datas = viewModel?.superHeroData.stories
         case serieSegue:
-            guard let destination = segue.destination as? SerieViewController else {
+            guard let destination = segue.destination as? EventsViewController else {
                 fatalError("Unexpected Destination View Controller")
             }
             self.serieViewController = destination

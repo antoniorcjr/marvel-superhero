@@ -23,7 +23,7 @@
 		A91703F220C430C6005B350A /* SuperHeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F120C430C6005B350A /* SuperHeroDetailsViewController.swift */; };
 		A91703F420C43E01005B350A /* CollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F320C43E01005B350A /* CollectionData.swift */; };
 		A91703F620C441AC005B350A /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F520C441AC005B350A /* CustomCollectionViewCell.swift */; };
-		A91703F920C4B331005B350A /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F820C4B331005B350A /* ComicViewController.swift */; };
+		A91703F920C4B331005B350A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703F820C4B331005B350A /* EventsViewController.swift */; };
 		A91703FB20C4B8C1005B350A /* ParticipationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703FA20C4B8C1005B350A /* ParticipationData.swift */; };
 		A91703FD20C4CE7F005B350A /* ParticipationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91703FC20C4CE7F005B350A /* ParticipationDetailsViewController.swift */; };
 		A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DC30820C225FA00EB2842 /* AppDelegate.swift */; };
@@ -31,9 +31,6 @@
 		A93DC31220C225FA00EB2842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31120C225FA00EB2842 /* Assets.xcassets */; };
 		A93DC31520C225FA00EB2842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31320C225FA00EB2842 /* LaunchScreen.storyboard */; };
 		A9B5420620C6AE7F0000093F /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = A91703DF20C40318005B350A /* character.json */; };
-		A9E38C7520CD9CCE00562CE6 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */; };
-		A9E38C7720CDA43600562CE6 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7620CDA43600562CE6 /* StoryViewController.swift */; };
-		A9E38C7920CDE9CE00562CE6 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7820CDE9CE00562CE6 /* SerieViewController.swift */; };
 		A9E38C7B20CDEFDF00562CE6 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7A20CDEFDF00562CE6 /* EventsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +69,7 @@
 		A91703F120C430C6005B350A /* SuperHeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailsViewController.swift; sourceTree = "<group>"; };
 		A91703F320C43E01005B350A /* CollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionData.swift; sourceTree = "<group>"; };
 		A91703F520C441AC005B350A /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		A91703F820C4B331005B350A /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
+		A91703F820C4B331005B350A /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		A91703FA20C4B8C1005B350A /* ParticipationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationData.swift; sourceTree = "<group>"; };
 		A91703FC20C4CE7F005B350A /* ParticipationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationDetailsViewController.swift; sourceTree = "<group>"; };
 		A93DC30520C225FA00EB2842 /* marvel-superhero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-superhero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,9 +82,6 @@
 		A93DC32120C225FA00EB2842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93DC32620C225FA00EB2842 /* marvel-superheroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-superheroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DC32C20C225FA00EB2842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		A9E38C7620CDA43600562CE6 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
-		A9E38C7820CDE9CE00562CE6 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		A9E38C7A20CDEFDF00562CE6 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +116,7 @@
 				A91703C020C2C0B3005B350A /* SearchViewController.swift */,
 				A91703F120C430C6005B350A /* SuperHeroDetailsViewController.swift */,
 				A91703FC20C4CE7F005B350A /* ParticipationDetailsViewController.swift */,
-				A9E38C7020CD9C8500562CE6 /* Super Hero Details */,
+				A91703F820C4B331005B350A /* EventsViewController.swift */,
 				A91703C220C33DEF005B350A /* Custom Cells */,
 				A91703C520C3479A005B350A /* View Models */,
 			);
@@ -305,17 +299,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A9E38C7020CD9C8500562CE6 /* Super Hero Details */ = {
-			isa = PBXGroup;
-			children = (
-				A91703F820C4B331005B350A /* ComicViewController.swift */,
-				A9E38C7420CD9CCE00562CE6 /* EventViewController.swift */,
-				A9E38C7620CDA43600562CE6 /* StoryViewController.swift */,
-				A9E38C7820CDE9CE00562CE6 /* SerieViewController.swift */,
-			);
-			path = "Super Hero Details";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -454,18 +437,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9E38C7720CDA43600562CE6 /* StoryViewController.swift in Sources */,
 				A91703C120C2C0B3005B350A /* SearchViewController.swift in Sources */,
 				A91703F620C441AC005B350A /* CustomCollectionViewCell.swift in Sources */,
-				A91703F920C4B331005B350A /* ComicViewController.swift in Sources */,
+				A91703F920C4B331005B350A /* EventsViewController.swift in Sources */,
 				A91703FB20C4B8C1005B350A /* ParticipationData.swift in Sources */,
 				A91703F020C42D0B005B350A /* UIImageView.swift in Sources */,
-				A9E38C7520CD9CCE00562CE6 /* EventViewController.swift in Sources */,
 				A91703DA20C37A9F005B350A /* SuperHeroData.swift in Sources */,
 				A91703D820C3724A005B350A /* DataWrapper.swift in Sources */,
 				A91703CC20C35140005B350A /* DataManager.swift in Sources */,
 				A91703FD20C4CE7F005B350A /* ParticipationDetailsViewController.swift in Sources */,
-				A9E38C7920CDE9CE00562CE6 /* SerieViewController.swift in Sources */,
 				A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */,
 				A91703D520C3719D005B350A /* RequestManager.swift in Sources */,
 				A91703C920C34DE0005B350A /* SuperHeroViewModel.swift in Sources */,
