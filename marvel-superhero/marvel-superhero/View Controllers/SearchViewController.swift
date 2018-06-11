@@ -15,8 +15,10 @@ class SearchViewController: UIViewController {
     var isFooterLoadingActive: Bool = false
     var offset: Int = 0
     var limit: Int = 20
+    var query: String = ""
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
     // MARK: - View model object
     var viewModel: SearchViewModel? {
@@ -58,9 +60,14 @@ class SearchViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    func fetchSuperHeroesData() {
+    func fetchSuperHeroesData(withQuery: Bool = false) {
+        if withQuery {
+            viewModel?.superHeroes = []
+            offset = 0
+        }
+
         let dataManager = DataManager()
-        dataManager.superHeroData(limit: limit, offset: offset, query: "") { (superHero) in
+        dataManager.superHeroData(limit: limit, offset: offset, query: query) { (superHero) in
             if superHero.count != 0 {
                 if let _ = self.viewModel {
                     self.viewModel?.superHeroes += superHero
@@ -120,5 +127,26 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "PresentSuperHero", sender: indexPath.row)
+    }
+}
+
+// MARK: - Search Bar protocols
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let query = searchBar.text {
+            self.query = query
+            fetchSuperHeroesData(withQuery: true)
+            searchBar.resignFirstResponder()
+            loading.stopAnimating()
+        }
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        query = ""
+        searchBar.resignFirstResponder()
+
+        loading.startAnimating()
+        fetchSuperHeroesData(withQuery: true)
     }
 }
