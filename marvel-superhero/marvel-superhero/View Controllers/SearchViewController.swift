@@ -19,7 +19,8 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-
+    @IBOutlet weak var noResults: UILabel!
+    
     // MARK: - View model object
     var viewModel: SearchViewModel? {
         didSet {
@@ -46,6 +47,12 @@ class SearchViewController: UIViewController {
     private func updateView() {
         DispatchQueue.main.async {
             if let _ = self.tableView {
+                if self.viewModel?.superHeroes.count == 0 {
+                    self.tableView.isHidden = true
+                } else {
+                    self.tableView.isHidden = false
+                }
+
                 if self.isFooterLoadingActive {
                     self.footerLoading?.stopAnimating()
                     self.isFooterLoadingActive = false

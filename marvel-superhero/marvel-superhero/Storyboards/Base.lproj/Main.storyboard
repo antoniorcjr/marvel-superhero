@@ -25,6 +25,12 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="flW-dM-Tc5"/>
                                 </connections>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl1-t1-R46">
+                                <rect key="frame" x="8" y="330.5" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nH7-xl-GtQ">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,7 +90,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2i6-c7-Md3" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="3ek-J1-V7M"/>
+                            <constraint firstItem="vl1-t1-R46" firstAttribute="centerY" secondItem="PQr-Ze-W5v" secondAttribute="centerY" id="Klv-2a-SMf"/>
                             <constraint firstItem="nH7-xl-GtQ" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="Ni3-pW-r4N"/>
+                            <constraint firstItem="vl1-t1-R46" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="8" id="Pg6-Kh-Fga"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="vl1-t1-R46" secondAttribute="trailing" constant="8" id="R3f-R3-1EK"/>
                             <constraint firstItem="2i6-c7-Md3" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="TZk-Er-F47"/>
                             <constraint firstItem="2i6-c7-Md3" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="WFC-4X-jGh"/>
                             <constraint firstItem="nH7-xl-GtQ" firstAttribute="top" secondItem="2i6-c7-Md3" secondAttribute="bottom" id="Y7h-Kc-rWg"/>
@@ -97,6 +106,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="92l-2M-AM7"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="noResults" destination="vl1-t1-R46" id="y9X-6r-AGr"/>
                         <outlet property="searchBar" destination="2i6-c7-Md3" id="xgt-xv-AAz"/>
                         <outlet property="tableView" destination="nH7-xl-GtQ" id="YMX-5m-9zB"/>
                         <segue destination="pQx-Zl-ScA" kind="show" identifier="PresentSuperHero" id="i7v-2a-Y3t"/>
