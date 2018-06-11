@@ -32,6 +32,7 @@
 		A93DC31520C225FA00EB2842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93DC31320C225FA00EB2842 /* LaunchScreen.storyboard */; };
 		A9B5420620C6AE7F0000093F /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = A91703DF20C40318005B350A /* character.json */; };
 		A9E38C7B20CDEFDF00562CE6 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7A20CDEFDF00562CE6 /* EventsViewModel.swift */; };
+		A9E38C8120CE236D00562CE6 /* marvel-superhero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7F20CE236D00562CE6 /* marvel-superhero.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A93DC32620C225FA00EB2842 /* marvel-superheroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-superheroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DC32C20C225FA00EB2842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E38C7A20CDEFDF00562CE6 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		A9E38C8020CE236D00562CE6 /* MarvelSuperHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarvelSuperHero.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				A91703CD20C35151005B350A /* Extensions */,
 				A93DC33B20C2280C00EB2842 /* Resources */,
 				A93DC33C20C2281B00EB2842 /* Supporting Files */,
+				A9E38C7E20CE234100562CE6 /* Core Data */,
 			);
 			path = "marvel-superhero";
 			sourceTree = "<group>";
@@ -297,6 +300,14 @@
 				A93DC32C20C225FA00EB2842 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9E38C7E20CE234100562CE6 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				A9E38C7F20CE236D00562CE6 /* marvel-superhero.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +455,7 @@
 				A91703F020C42D0B005B350A /* UIImageView.swift in Sources */,
 				A91703DA20C37A9F005B350A /* SuperHeroData.swift in Sources */,
 				A91703D820C3724A005B350A /* DataWrapper.swift in Sources */,
+				A9E38C8120CE236D00562CE6 /* marvel-superhero.xcdatamodeld in Sources */,
 				A91703CC20C35140005B350A /* DataManager.swift in Sources */,
 				A91703FD20C4CE7F005B350A /* ParticipationDetailsViewController.swift in Sources */,
 				A93DC30920C225FA00EB2842 /* AppDelegate.swift in Sources */,
@@ -764,6 +776,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A9E38C7F20CE236D00562CE6 /* marvel-superhero.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A9E38C8020CE236D00562CE6 /* MarvelSuperHero.xcdatamodel */,
+			);
+			currentVersion = A9E38C8020CE236D00562CE6 /* MarvelSuperHero.xcdatamodel */;
+			path = "marvel-superhero.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A93DC2FD20C225FA00EB2842 /* Project object */;
 }
