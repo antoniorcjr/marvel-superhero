@@ -16,7 +16,8 @@ class SuperHeroTableViewCell: UITableViewCell {
     @IBOutlet weak var superheroImage: UIImageView!
     @IBOutlet weak var superheroName: UILabel!
     @IBOutlet weak var superheroDescription: UILabel!
-
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     // MARK: - Initialization
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +29,8 @@ class SuperHeroTableViewCell: UITableViewCell {
         superheroName.text = viewModel.name
         superheroDescription.text = viewModel.description
         superheroImage.loadImage(fromURL: viewModel.image)
+    }
+
+    @IBAction func favorite(_ sender: Any) {
     }
 }

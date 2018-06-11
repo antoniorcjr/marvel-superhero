@@ -51,23 +51,36 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superhero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-za-xc5">
                                                     <rect key="frame" x="105" y="8" width="262" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                    <color key="textColor" red="0.78481549019999997" green="0.14710986609999999" blue="0.02336045913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.78431372549019607" green="0.14901960784313725" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75I-ag-ojW">
-                                                    <rect key="frame" x="105" y="37" width="262" height="57"/>
+                                                    <rect key="frame" x="105" y="37" width="212" height="57"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VO-MC-Q5W">
+                                                    <rect key="frame" x="329" y="53.5" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="8E2-4V-Di0"/>
+                                                        <constraint firstAttribute="width" constant="24" id="FZC-u8-WeA"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="favorite"/>
+                                                    <connections>
+                                                        <action selector="favorite:" destination="l6c-cj-bSa" eventType="touchUpInside" id="TmR-qV-Ycg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bPH-dU-Aum" firstAttribute="top" secondItem="RX5-ga-a1c" secondAttribute="top" constant="8" id="5DY-pO-MHU"/>
                                                 <constraint firstItem="bPH-dU-Aum" firstAttribute="leading" secondItem="RX5-ga-a1c" secondAttribute="leading" constant="15" id="64c-e7-dDM"/>
                                                 <constraint firstAttribute="trailing" secondItem="bdc-za-xc5" secondAttribute="trailing" constant="8" id="8gE-z3-Cwy"/>
+                                                <constraint firstItem="2VO-MC-Q5W" firstAttribute="leading" secondItem="75I-ag-ojW" secondAttribute="trailing" constant="12" id="9T3-xI-luF"/>
                                                 <constraint firstAttribute="bottom" secondItem="75I-ag-ojW" secondAttribute="bottom" constant="10.5" id="C7o-M0-7VW"/>
                                                 <constraint firstItem="75I-ag-ojW" firstAttribute="top" secondItem="bdc-za-xc5" secondAttribute="bottom" constant="8" id="Qy6-K1-19M"/>
-                                                <constraint firstItem="75I-ag-ojW" firstAttribute="trailing" secondItem="bdc-za-xc5" secondAttribute="trailing" id="Rjj-VT-icn"/>
+                                                <constraint firstItem="75I-ag-ojW" firstAttribute="trailing" secondItem="bdc-za-xc5" secondAttribute="trailing" constant="-50" id="Rjj-VT-icn"/>
+                                                <constraint firstItem="2VO-MC-Q5W" firstAttribute="centerY" secondItem="75I-ag-ojW" secondAttribute="centerY" id="TDo-cT-1IF"/>
                                                 <constraint firstItem="75I-ag-ojW" firstAttribute="leading" secondItem="bdc-za-xc5" secondAttribute="leading" id="do8-1a-MZ9"/>
                                                 <constraint firstAttribute="bottom" secondItem="bPH-dU-Aum" secondAttribute="bottom" constant="8" id="oZi-eO-q7u"/>
                                                 <constraint firstItem="bdc-za-xc5" firstAttribute="leading" secondItem="bPH-dU-Aum" secondAttribute="trailing" constant="8" id="uRN-Jy-yln"/>
@@ -75,6 +88,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteButton" destination="2VO-MC-Q5W" id="rYa-dQ-BLF"/>
                                             <outlet property="superheroDescription" destination="75I-ag-ojW" id="oaC-cX-HkG"/>
                                             <outlet property="superheroImage" destination="bPH-dU-Aum" id="eOi-XH-LeK"/>
                                             <outlet property="superheroName" destination="bdc-za-xc5" id="kNi-kZ-utO"/>
@@ -114,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="-1"/>
+            <point key="canvasLocation" x="1573.5999999999999" y="-1.3493253373313345"/>
         </scene>
         <!--Super Hero Details View Controller-->
         <scene sceneID="Njh-FG-hMi">
@@ -777,6 +791,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favorite" width="16" height="16"/>
         <image name="marvel_notfound" width="512" height="704"/>
     </resources>
     <inferredMetricsTieBreakers>
