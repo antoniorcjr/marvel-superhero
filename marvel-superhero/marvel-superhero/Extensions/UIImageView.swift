@@ -11,6 +11,11 @@ import UIKit
 
 extension UIImageView {
     func loadImage(fromURL urlString: String) {
+        if urlString == "." {
+            self.image = #imageLiteral(resourceName: "marvel_notfound")
+            return
+        }
+
         guard let url = URL(string: urlString) else {
             return
         }
