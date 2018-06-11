@@ -9,7 +9,7 @@
 import Foundation
 
 struct EventsViewModel {
-    var events: [Participation]
+    var events: [ParticipationData]
 
     // Mark: - Computed properties
     var sections: Int {
@@ -20,7 +20,7 @@ struct EventsViewModel {
         return events.count
     }
 
-    func event(for index: Int) -> Participation {
+    func event(for index: Int) -> ParticipationData {
         return events[index]
     }
 }

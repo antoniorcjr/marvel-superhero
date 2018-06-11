@@ -57,7 +57,7 @@ class EventsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PresentParticipationDetails" {
             if let vc = segue.destination as? ParticipationDetailsViewController {
-                vc.participation = sender as? Participation
+                vc.participation = sender as? ParticipationData
             }
         }
     }

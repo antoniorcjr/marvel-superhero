@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Participation {
+struct ParticipationData {
     private enum Keys {
         static let id = "id"
         static let title = "title"

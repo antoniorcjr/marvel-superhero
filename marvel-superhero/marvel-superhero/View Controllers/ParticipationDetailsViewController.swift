@@ -10,7 +10,7 @@ import UIKit
 
 class ParticipationDetailsViewController: UIViewController {
     // MARK: Properties
-    var participation: Participation?
+    var participation: ParticipationData?
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var name: UILabel!

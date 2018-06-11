@@ -73,16 +73,16 @@ final class DataManager {
         }
     }
 
-    func comicData(limit: Int, collectionUri: String, completion: @escaping ([Participation]) -> Void) {
+    func comicData(limit: Int, collectionUri: String, completion: @escaping ([ParticipationData]) -> Void) {
         var finalUrl = collectionUri + (API.Routes.none.timestamp ?? "")
         finalUrl += "&limit=" + String(limit)
         guard let url = URL(string: finalUrl) else { return }
 
         requestManager.request(url: url, method: .get) { (data, error) in
-            var comics: [Participation] = []
+            var comics: [ParticipationData] = []
             if let result = data["results"] as? [[String: Any]] {
                 for comic in result {
-                    comics.append(Participation(dataDict: comic))
+                    comics.append(ParticipationData(dataDict: comic))
                 }
             }
             completion(comics)

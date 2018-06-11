@@ -14,7 +14,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
 
     // Cell configuration
-    func configure(data: Participation) {
+    func configure(data: ParticipationData) {
         image.loadImage(fromURL: data.imagePath)
         name.text = data.title
     }
