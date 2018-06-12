@@ -36,7 +36,7 @@ public class CollectionData: NSManagedObject {
 
     init(dataDict: [String: Any], type: ParticipationType) {
         let context = CoreDataManager.shared.context
-        let entity = NSEntityDescription.entity(forEntityName: "SuperHero", in: context)
+        let entity = NSEntityDescription.entity(forEntityName: "Collection", in: context)
         super.init(entity: entity!, insertInto: nil)
 
         self.type = type.rawValue
@@ -61,7 +61,7 @@ public class CollectionItem: NSManagedObject {
 
     init(dataDict: [String: Any]) {
         let context = CoreDataManager.shared.context
-        let entity = NSEntityDescription.entity(forEntityName: "SuperHero", in: context)
+        let entity = NSEntityDescription.entity(forEntityName: "CollectionItem", in: context)
         super.init(entity: entity!, insertInto: nil)
 
         resourceUri = (dataDict[Keys.resourceUri] as? String) ?? ""
