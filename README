@@ -1,0 +1,10 @@
+About the Super Hero project
+
+The Super Hero uses the MVVM as design patterns and Core Data to store favorites Super Hero
+
+The view controllers are located into the group View Controllers:
+- The View Model group has all the view models related to view controllers
+- The Custom Cells has the custom ViewControllers for the tableview and collection view cells
+
+Managers are all classes that help view controllers and models to access the API data and
+Core Data context
