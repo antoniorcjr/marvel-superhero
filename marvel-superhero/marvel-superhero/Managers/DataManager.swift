@@ -67,7 +67,7 @@ final class DataManager {
             }
 
             let superHero: [SuperHeroData] =
-                result.map { SuperHeroData(dictionary: $0)! }
+                result.map { SuperHeroData(dictionary: $0) }
 
             completion(superHero)
         }

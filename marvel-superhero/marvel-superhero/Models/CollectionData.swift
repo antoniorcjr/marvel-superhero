@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import CoreData
 
-public class CollectionData {
+public class CollectionData: NSManagedObject {
     public enum ParticipationType: String {
         case comics = "Comics"
         case series = "Series"
@@ -23,12 +24,21 @@ public class CollectionData {
         static let items = "items"
     }
 
-    var type: String
-    var available: Int
-    var collectionUri: String
+    @NSManaged var type: String
+    @NSManaged var available: Int
+    @NSManaged var collectionUri: String
     var items: [CollectionItem] = []
 
+    public override init(entity: NSEntityDescription,
+                         insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
+
     init(dataDict: [String: Any], type: ParticipationType) {
+        let context = CoreDataManager.shared.context
+        let entity = NSEntityDescription.entity(forEntityName: "SuperHero", in: context)
+        super.init(entity: entity!, insertInto: nil)
+
         self.type = type.rawValue
         available = (dataDict[Keys.available] as? Int) ?? 0
         collectionUri = (dataDict[Keys.collectionUri] as? String) ?? ""
@@ -40,16 +50,20 @@ public class CollectionData {
     }
 }
 
-public class CollectionItem {
+public class CollectionItem: NSManagedObject {
     public enum Keys {
         static let resourceUri = "resourceURI"
         static let name = "name"
     }
 
-    var resourceUri: String
-    var name: String
+    @NSManaged var resourceUri: String
+    @NSManaged var name: String
 
     init(dataDict: [String: Any]) {
+        let context = CoreDataManager.shared.context
+        let entity = NSEntityDescription.entity(forEntityName: "SuperHero", in: context)
+        super.init(entity: entity!, insertInto: nil)
+
         resourceUri = (dataDict[Keys.resourceUri] as? String) ?? ""
         name = (dataDict[Keys.name] as? String) ?? ""
     }

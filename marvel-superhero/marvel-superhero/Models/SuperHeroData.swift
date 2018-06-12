@@ -7,10 +7,10 @@
 //
 
 import Foundation
+import CoreData
 
-
-struct SuperHeroData {
-    private enum Keys {
+public class SuperHeroData: NSManagedObject {
+   public struct Keys {
         static let id = "id"
         static let name = "name"
         static let description = "description"
@@ -24,19 +24,26 @@ struct SuperHeroData {
     }
 
     // MARK: - Properties
-    let id: Int
-    let name: String
-    let descriptionText: String
-    let imagePath: String
-    let comics: CollectionData?
-    let series: CollectionData?
-    let stories: CollectionData?
-    let events: CollectionData?
-}
+    @NSManaged public var id: Int
+    @NSManaged public var name: String
+    @NSManaged public var descriptionText: String
+    @NSManaged public var imagePath: String
+    public var comics: CollectionData?
+    public var series: CollectionData?
+    public var stories: CollectionData?
+    public var events: CollectionData?
 
-extension SuperHeroData {
+    public override init(entity: NSEntityDescription,
+                         insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
+
     // MARK: - Initialization
-    init?(dictionary: [String: Any]) {
+    init(dictionary: [String: Any]) {
+        let context = CoreDataManager.shared.context
+        let entity = NSEntityDescription.entity(forEntityName: "SuperHero", in: context)
+        super.init(entity: entity!, insertInto: nil)
+
         id = (dictionary[Keys.id] as? Int) ?? 0
         name = (dictionary[Keys.name] as? String) ?? ""
         descriptionText = (dictionary[Keys.description] as? String) ?? ""

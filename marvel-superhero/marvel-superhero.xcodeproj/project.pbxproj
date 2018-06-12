@@ -33,6 +33,7 @@
 		A9B5420620C6AE7F0000093F /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = A91703DF20C40318005B350A /* character.json */; };
 		A9E38C7B20CDEFDF00562CE6 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7A20CDEFDF00562CE6 /* EventsViewModel.swift */; };
 		A9E38C8120CE236D00562CE6 /* marvel-superhero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C7F20CE236D00562CE6 /* marvel-superhero.xcdatamodeld */; };
+		A9E38C8520CFD73700562CE6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E38C8420CFD73700562CE6 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		A93DC32C20C225FA00EB2842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E38C7A20CDEFDF00562CE6 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		A9E38C8020CE236D00562CE6 /* MarvelSuperHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarvelSuperHero.xcdatamodel; sourceTree = "<group>"; };
+		A9E38C8420CFD73700562CE6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				A91703CB20C35140005B350A /* DataManager.swift */,
 				A91703D420C3719D005B350A /* RequestManager.swift */,
+				A9E38C8420CFD73700562CE6 /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				A91703C720C347BB005B350A /* SearchViewModel.swift in Sources */,
 				A9E38C7B20CDEFDF00562CE6 /* EventsViewModel.swift in Sources */,
 				A91703F420C43E01005B350A /* CollectionData.swift in Sources */,
+				A9E38C8520CFD73700562CE6 /* CoreDataManager.swift in Sources */,
 				A91703C420C33E1A005B350A /* SuperHeroTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
